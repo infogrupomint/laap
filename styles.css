@@ -1,0 +1,504 @@
+/* Estilos CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdc938;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  font-family: "Sansita Swashed", system-ui;
+}
+
+.cart{
+  display: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px; /* Ajusta el tamaño del logo según sea necesario */
+  margin-right: 10px;
+}
+
+.cart-btn-h button {
+  padding: 10px 20px;
+  background-color: #ff4500; /* Color de fondo del botón */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-btn-h button:hover {
+  background-color: #ff7f50; /* Cambia el color de fondo del botón al pasar el ratón */
+}
+/*header{
+  color: #fff;
+  text-align: center;
+  background-color: #141414;
+  font-family: "Lobster", sans-serif;
+
+}*/
+
+/*.categorias-btn{
+  display: inline-block;
+  margin: 2px;
+  align-items: center;
+  justify-content: center;
+  width: 24%;
+  height: 80px;
+  background-color: #141414;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: .3s ease all;
+  border-radius: 10px;
+}
+
+.categorias-btn:hover{
+  color: #141414;
+  background: #ccc;
+}*/
+#categories {
+  display: flex; /* Usa flexbox */
+  flex-wrap: wrap; /* Envuelve los elementos en múltiples líneas si no caben en una sola línea */
+  justify-content: center; /* Centra los elementos horizontalmente */
+}
+.categorias-btn {
+  width: 150px; /* Establece el ancho deseado */
+  height: 50px; /* Establece la altura deseada */
+  margin: 5px; /* Margen entre los botones */
+  text-align: center; /* Centra el texto dentro del botón */
+  padding: 10px 20px; /* Espacio interno del botón */
+  background-color: #131313; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo puntero al pasar sobre el botón */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  margin: 5px; /* Margen entre los botones */
+}
+
+.categorias-btn:hover {
+  background-color: #d63a2f; /* Cambio de color de fondo al pasar el ratón */
+}
+
+.categorias-btn:focus {
+  outline: none; /* Elimina el contorno al hacer foco en el botón */
+}
+
+.categorias-btn:active {
+  transform: translateY(1px); /* Efecto de hundimiento al hacer clic en el botón */
+}
+
+
+.menu {
+  color: white;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+
+.productInicio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  background-color: #f0492b;
+  border-radius: 10px;
+}
+
+.productInicio h3 {
+  margin: 2px;
+}
+
+.productInicio p {
+  margin-right: 10px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+}
+
+.btnAgregarCarrito {
+  background-color: #FFD700; /* Color de fondo dorado */
+  color: #fff; /* Color del texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+.btnAgregarCarrito:hover {
+  background-color: #FFA500; /* Cambiar color de fondo al pasar el cursor */
+}
+
+.btnAgregarCarrito:active {
+  background-color: #FF8C00; /* Cambiar color de fondo al hacer clic */
+}
+
+
+.cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #141414;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: .3s ease all;
+  border-radius: 10px;
+}
+
+.enviarBtn{
+  background-color: aqua;
+}
+
+@media only screen and (max-width: 500px){
+
+  .mensajeTemporal {
+    top: 50%;
+    left: 50%;
+  }
+
+
+  .productInicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin-bottom: 2px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    background-color: #f0492b;
+    border-radius: 10px;
+  }
+  
+  .productInicio h3 {
+    margin: 2px;
+    font-size: 18px;
+  }
+  
+  .productInicio p {
+    margin-right: 2px;
+  }
+  
+  .details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btnAgregarCarrito {
+    background-color: #FFD700; /* Color de fondo dorado */
+    color: #fff; /* Color del texto blanco */
+    height: 40px;
+    width: 120px;
+    padding: 2px 2px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 15px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+  }
+  
+  .btnAgregarCarrito:hover {
+    background-color: #FFA500; /* Cambiar color de fondo al pasar el cursor */
+  }
+  
+  .btnAgregarCarrito:active {
+    background-color: #FF8C00; /* Cambiar color de fondo al hacer clic */
+  }
+
+  #categories {
+    display: flex; /* Usa flexbox */
+    flex-wrap: wrap; /* Envuelve los elementos en múltiples líneas si no caben en una sola línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+  .categorias-btn {
+    width: 150px; /* Establece el ancho deseado */
+    height: 50px; /* Establece la altura deseada */
+    margin: 5px; /* Margen entre los botones */
+    text-align: center; /* Centra el texto dentro del botón */
+  }
+}
+
+
+/*modal*/
+.modal-overlay{
+  display: none;
+  background-color: rgb(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  ;
+}
+.modal-container {
+  display: none;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 300px;
+  width: 100%;
+  z-index: 1;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 15px;
+}
+
+.modal-container::-webkit-scrollbar{
+  display: none;
+}
+
+.modal-close {
+  float: right;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/*modal-body*/
+.modal-body {
+  margin-bottom: 10px;
+  text-align: center;
+  
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /*margin-top: 15px;*/
+  border-radius: 10px;
+  background-color: #333;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #cfcc25;
+  border-radius: 5px;
+  margin: 10px;
+  /*margin-top: 20px;*/
+}
+
+/*.product-img {
+  height: 80px;
+  margin-right: 20px;
+  width: 80px;
+}*/
+
+.product-info{
+  color: #ccc;
+  flex: 1;
+  text-align: left;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+/*.product-info h4 {
+  margin-top: 35px;
+}*/
+
+/*.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-right: 4em;
+}
+
+.quantity-btn-decrese,
+.quantity-btn-increse {
+  color: #333333;
+  cursor: pointer;
+  font-size: 16px;
+  width: 28px;
+  font-weight: bold;
+}
+
+.quantity-input{
+  color: #333333;
+  font-size: 16px;
+  padding: 10 10px;
+  text-align: center;
+  width: 50px;
+  font-weight: bold;
+}*/
+
+@media only screen and (max-width: 500px){
+  .pr{
+      display: none;
+  }
+  .modal-body{
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  /*margin-top: 20px;*/
+}
+
+.delete-product {
+  /*margin-top: 20px;*/
+  margin-left: 1em;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+.total-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #36c429;
+  border-color: #36c429;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.btn-primary:hover{
+  background-color: #226d1b;
+  border-color: #226d1b;
+}
+
+
+.smart-button-container-overlay {
+  display: none;
+  background-color: rgb(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  ;
+}
+.smart-button-container  {
+  display: none;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 100%;
+  z-index: 2;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+#sala-ubicacion {
+  margin-top: 10px;
+  text-align: center;
+  font-family: sans-serif;
+  color: hsl(0, 0%, 15%); /* Cambia el color del texto según tus preferencias */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-color: #d6482f;
+  border-radius: 15px;
+
+}
+
+
+#sala, #ubicacion {
+  color: #141414;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+}
+
+.metodo h4{
+  padding-top: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.mensajeTemporal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  color: #ffffff;
+  font-weight: bold;
+  transform: translateX(-50%);
+  background-color: #0f13fa;
+  border: 1px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
